@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Research Assistant</title>
+    <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
+    <style>
+        body {
+            background-image: url('/static/AIimage.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .content-wrapper {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 60px; /* Adjusted to accommodate the About Us section */
+        }
+        #chat-container {
+            height: 60vh;
+            overflow-y: auto;
+            margin-top: 20px;
+        }
+        .message {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .user-message {
+            background-color: var(--bs-primary);
+        }
+        .bot-message {
+            background-color: var(--bs-secondary);
+        }
+        .about-us-section {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div class="about-us-section mb-4">
+        <button class="btn btn-primary" id="about-us-btn">About Us</button>
+        <div class="about-us-content mt-2" style="display: none;">
+            <button class="btn btn-secondary btn-sm mb-2" data-section="mission">Our Mission</button>
+            <button class="btn btn-secondary btn-sm mb-2" data-section="how-we-work">How We Work</button>
+            <button class="btn btn-secondary btn-sm mb-2" data-section="our-team">Our Team</button>
+            <button class="btn btn-secondary btn-sm mb-2" data-section="contact-us">Contact Us</button>
+            <div id="about-us-text" class="mt-2"></div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="content-wrapper">
+            <h1 class="text-center mb-4">Welcome to Research Assistant</h1>
+            <form id="chat-form" class="d-flex mb-3">
+                <input type="text" id="user-input" class="form-control me-2" placeholder="Type your message here..." required>
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+            <div id="chat-container" class="border rounded p-3"></div>
+        </div>
+    </div>
+
+    <script src="static/js/chat.js"></script>
+</body>
+</html>
